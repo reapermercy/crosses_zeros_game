@@ -1,0 +1,44 @@
+#field {
+    display: grid;
+    grid-template-columns: repeat(3, 200px);
+    grid-template-rows: repeat(3, 200px);
+    gap: 5px;
+    background-color: #0E4C4E;
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 10px;
+    }
+    .cell {
+    width: 200px;
+    height: 200px;
+    background-color: lightgrey;
+    font-size: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background-size: cover;
+    }
+    body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #101820;
+    }
+    .container {
+    display: flex;
+    flex-direction: column;
+    }
+    .grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 5px;
+    }
+    .grid div {
+    border: 1px solid #000;
+    }
+    #text {
+    color: white;
+    }
