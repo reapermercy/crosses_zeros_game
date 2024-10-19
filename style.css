@@ -40,12 +40,17 @@
     border: 1px solid #000;
     }
     #text {
-    font-size: 36;
-    margin-top: 40px;
+    font-size: 48px;
     color: white;
     }
     #player{
-    font-size: 36;
-    margin-top: 40px;
+    font-size: 30;
+    margin-top: 30px;
     color: white;
     }
+    #gameResult {
+    font-size: 36px;
+    margin-top: 30px;
+    text-align: center;
+    color: white;
+    }    
