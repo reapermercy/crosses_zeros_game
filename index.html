@@ -1,15 +1,23 @@
 <html lang="ru">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Крестики-Нолики</title>
-<link rel="stylesheet" href="style.css">
-</head>
-<body class = "container">
-<h1 id = "text">БигБосс VS СолаГудмана</h1>
-<div id = "field" class = "grid"></div>
-<div id="player">Сейчас ходит: X</div>
-<div id="gameResult">Результат</div>
-<script src="main.js"></script>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Крестики-Нолики</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body class = "container">
+        <h1 id = "text">БигБосс VS СолГудман</h1>
+        <div id="scorefield1">
+        <div id="score">X: <span id="scoreX">0</span></div>
+        </div>
+        <div id="scorefield2">
+        <div id="score">O: <span id="scoreO">0</span></div>
+        </div>
+        <div id = "field" class = "grid"></div>
+        <div id="player">Сейчас ходит: X</div>
+        <div id="gameResult">Результат</div>
+        <button id="nextRound">Новый раунд</button>
+        <button id="resetBtn">Сбросить счет</button>
+        <script src="main.js"></script>
+    </body>
 </html>
