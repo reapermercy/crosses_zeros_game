@@ -3,6 +3,7 @@ let gameField = ['', '', '', '', '', '', '', '', ''];
 let gameOver = false;
 const winX = new Audio('sound/bigboss.mp3');
 const winO = new Audio('sound/callsaul.mp3');
+const draw = new Audio('sound/walter.mp3');
 
 function drawField() {
     const field = document.getElementById('field');
@@ -32,8 +33,17 @@ function handleClick(event) {
             } else {
               winO.play();
             }
-            alert(`Победил ${player = player === 'X' ? 'O' : 'X'}!`);
-    }
+            document.getElementById('gameResult').textContent = `Победил ${player = player === 'X' ? 'O' : 'X'}!`;
+        } 
+        else if (checkDraw()) {
+        gameOver = true;
+        draw.play();
+        document.getElementById('gameResult').textContent = 'Ничья!';
+        const cells = document.querySelectorAll('.cell');
+        cells.forEach(cell => {
+        cell.style.backgroundImage = 'url("images/walter.jpg")';
+      });
+        }
     if (cell.style.backgroundImage) {
     return;
     }
@@ -62,6 +72,9 @@ function checkWin() {
     }
     return false;
   }
-  
+
+  function checkDraw() {
+    return !gameField.includes('');
+  }
 
 drawField();
